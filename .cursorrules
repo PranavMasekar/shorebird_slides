@@ -1,0 +1,168 @@
+# Flutter macOS Presentation App Rules
+
+## Project Context
+This is a Flutter macOS application designed exclusively for presentation purposes using the flutter_deck package. The app uses League Spartan font from google_fonts package.
+
+## macOS-Specific UI Guidelines
+
+### Text Styling for Presentations
+1. **Font Sizes**: Use larger font sizes appropriate for presentations viewed on large screens:
+   - Headings: 48-72px (or 48-72 logical pixels)
+   - Subheadings: 32-48px
+   - Body text: 24-32px
+   - Small text/captions: 18-24px
+   - Minimum readable text: 18px (never smaller)
+
+2. **League Spartan Font Usage**:
+   - Always use `GoogleFonts.leagueSpartan()` for text styling
+   - Use appropriate font weights: 400 (regular), 500 (medium), 600 (semi-bold), 700 (bold)
+   - For headings, prefer weights 600-700
+   - For body text, use weights 400-500
+   - Example: `GoogleFonts.leagueSpartan(fontSize: 48, fontWeight: FontWeight.w700)`
+
+3. **Text Contrast and Readability**:
+   - Ensure high contrast between text and background (minimum 4.5:1 for normal text, 3:1 for large text)
+   - Use dark text on light backgrounds or light text on dark backgrounds
+   - Avoid subtle color differences that work on mobile but may be hard to read on projectors
+
+4. **Line Height and Spacing**:
+   - Use generous line height (1.4-1.6x font size) for better readability
+   - Add adequate spacing between paragraphs (16-24px minimum)
+   - Use letter spacing of 0-0.5px for headings if needed for clarity
+
+### Layout and Spacing
+
+1. **Screen Dimensions**:
+   - Design for typical presentation screen sizes (1920x1080, 2560x1440, etc.)
+   - Use responsive layouts that scale well across different screen sizes
+   - Consider safe areas but remember presentations are typically fullscreen
+
+2. **Padding and Margins**:
+   - Use larger padding values (32-64px) compared to mobile apps
+   - Slide content should have generous margins (48-80px from edges)
+   - Group related content with consistent spacing
+
+3. **Widget Sizing**:
+   - Buttons and interactive elements should be larger (minimum 48px height)
+   - Icons should be sized appropriately (32-48px for standard icons, 64-96px for emphasis)
+   - Images should be high resolution and properly scaled
+
+### Color and Visual Design
+
+1. **Color Palette**:
+   - Use high-contrast color schemes suitable for projectors
+   - Avoid very light or very subtle colors that may not display well
+   - Test color combinations for visibility in various lighting conditions
+
+2. **Backgrounds**:
+   - Prefer solid colors or subtle gradients over complex patterns
+   - Ensure backgrounds don't interfere with text readability
+   - Consider dark mode compatibility for presentation environments
+
+### Flutter Deck Specific Guidelines
+
+1. **Slide Structure**:
+   - Keep slides focused on single concepts
+   - Use FlutterDeckSlide widgets consistently
+   - Leverage FlutterDeckSlideTheme for consistent styling across slides
+
+2. **Slide Content**:
+   - Use FlutterDeckTitleSlide for title slides
+   - Use FlutterDeckSectionSlide for section dividers
+   - Keep content concise and scannable
+   - Use bullet points sparingly and make them large enough to read
+
+3. **Animations and Transitions**:
+   - Use subtle animations that enhance understanding, not distract
+   - Ensure transitions are smooth and professional
+   - Test animations on actual presentation hardware
+
+### Code Structure
+
+1. **Widget Organization**:
+   - Extract reusable slide components into separate widgets
+   - Create a consistent slide template/widget for repeated layouts
+   - Organize slides in a dedicated directory structure (e.g., `lib/slides/`)
+
+2. **Theme Configuration**:
+   - Define a consistent theme using FlutterDeckThemeData
+   - Set default text styles using League Spartan
+   - Configure colors, spacing, and typography at the app level
+
+3. **Constants and Configuration**:
+   - Define presentation-specific constants (font sizes, spacing, colors) in a constants file
+   - Use meaningful names like `kSlideTitleFontSize`, `kSlidePadding`, etc.
+
+### Performance Considerations
+
+1. **Asset Optimization**:
+   - Optimize images for presentation quality while maintaining reasonable file sizes
+   - Use appropriate image formats (WebP when possible)
+   - Lazy load heavy assets if needed
+
+2. **Rendering**:
+   - Ensure smooth 60fps performance during transitions
+   - Avoid expensive operations in build methods
+   - Use const constructors where possible
+
+### Best Practices
+
+1. **Accessibility**:
+   - Ensure text is readable from a distance
+   - Use semantic widgets and proper accessibility labels
+   - Test with screen readers if applicable
+
+2. **Testing**:
+   - Test on actual presentation hardware when possible
+   - Verify readability at various distances
+   - Test in different lighting conditions
+
+3. **Code Quality**:
+   - Follow Effective Dart guidelines
+   - Use const constructors for static content
+   - Keep widgets focused and reusable
+   - Document complex slide logic
+
+### Example Patterns
+
+**Text Styling Pattern**:
+```dart
+Text(
+  'Slide Title',
+  style: GoogleFonts.leagueSpartan(
+    fontSize: 64,
+    fontWeight: FontWeight.w700,
+    height: 1.2,
+    letterSpacing: 0.5,
+  ),
+)
+```
+
+**Slide Padding Pattern**:
+```dart
+Padding(
+  padding: const EdgeInsets.all(64.0),
+  child: // slide content
+)
+```
+
+**Theme Configuration Pattern**:
+```dart
+FlutterDeckThemeData(
+  textTheme: FlutterDeckTextTheme(
+    title: GoogleFonts.leagueSpartan(fontSize: 64, fontWeight: FontWeight.w700),
+    subtitle: GoogleFonts.leagueSpartan(fontSize: 48, fontWeight: FontWeight.w600),
+    body: GoogleFonts.leagueSpartan(fontSize: 32, fontWeight: FontWeight.w400),
+  ),
+)
+```
+
+## Summary
+- Always use League Spartan font via GoogleFonts
+- Use larger font sizes (minimum 18px, typically 24-72px)
+- Generous spacing and padding (32-64px+)
+- High contrast colors for readability
+- Optimize for large screen viewing
+- Follow flutter_deck best practices
+- Consider macOS-specific presentation features
+
