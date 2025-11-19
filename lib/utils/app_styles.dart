@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shorebird_slides/utils/app_colors.dart';
 
-/// App-wide text styles using League Spartan font.
-///
-/// All styles are optimized for presentation viewing on large screens.
 class AppStyles {
   AppStyles._();
 
   // Font sizes for presentations
-  static const double fontSizeH1 = 72.0;
+  static const double fontSizeH1 = 100.0;
   static const double fontSizeH2 = 56.0;
   static const double fontSizeH3 = 48.0;
   static const double fontSizeH4 = 40.0;
@@ -36,13 +34,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeH1,
+      fontSize: fontSize ?? fontSizeH1,
       fontWeight: fontWeight ?? FontWeight.w700,
       height: height ?? lineHeightTight,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -52,13 +51,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeH2,
+      fontSize: fontSize ?? fontSizeH2,
       fontWeight: fontWeight ?? FontWeight.w700,
       height: height ?? lineHeightTight,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -68,13 +68,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeH3,
+      fontSize: fontSize ?? fontSizeH3,
       fontWeight: fontWeight ?? FontWeight.w600,
       height: height ?? lineHeightNormal,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -84,13 +85,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeH4,
+      fontSize: fontSize ?? fontSizeH4,
       fontWeight: fontWeight ?? FontWeight.w600,
       height: height ?? lineHeightNormal,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -100,13 +102,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeH5,
+      fontSize: fontSize ?? fontSizeH5,
       fontWeight: fontWeight ?? FontWeight.w600,
       height: height ?? lineHeightNormal,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -116,13 +119,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeH6,
+      fontSize: fontSize ?? fontSizeH6,
       fontWeight: fontWeight ?? FontWeight.w500,
       height: height ?? lineHeightNormal,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -132,13 +136,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeBody,
+      fontSize: fontSize ?? fontSizeBody,
       fontWeight: fontWeight ?? FontWeight.w400,
       height: height ?? lineHeightRelaxed,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -148,13 +153,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeBodyLarge,
+      fontSize: fontSize ?? fontSizeBodyLarge,
       fontWeight: fontWeight ?? FontWeight.w400,
       height: height ?? lineHeightRelaxed,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -164,9 +170,10 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeBodySmall,
+      fontSize: fontSize ?? fontSizeBodySmall,
       fontWeight: fontWeight ?? FontWeight.w400,
       height: height ?? lineHeightRelaxed,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
@@ -180,13 +187,14 @@ class AppStyles {
     FontWeight? fontWeight,
     double? letterSpacing,
     double? height,
+    double? fontSize,
   }) {
     return GoogleFonts.leagueSpartan(
-      fontSize: fontSizeCaption,
+      fontSize: fontSize ?? fontSizeCaption,
       fontWeight: fontWeight ?? FontWeight.w400,
       height: height ?? lineHeightNormal,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 
@@ -203,7 +211,7 @@ class AppStyles {
       fontWeight: fontWeight ?? FontWeight.w400,
       height: height ?? lineHeightNormal,
       letterSpacing: letterSpacing ?? letterSpacingNormal,
-      color: color,
+      color: color ?? AppColors.textColor,
     );
   }
 }
