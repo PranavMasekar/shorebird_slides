@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shorebird_slides/utils/app_assets.dart';
+import 'package:shorebird_slides/utils/app_colors.dart';
 import 'package:shorebird_slides/utils/app_styles.dart';
 import 'package:shorebird_slides/utils/spacing.dart';
 import 'package:shorebird_slides/widgets/base_slide.dart';
@@ -48,7 +49,7 @@ class SpeakerSlide extends StatelessWidget {
           const Spacer(),
           CircleAvatar(
             radius: 250,
-            backgroundColor: Colors.blue,
+            backgroundColor: AppColors.backgroundColor,
             backgroundImage: AssetImage(AppAssets.profileImage),
           ),
         ],

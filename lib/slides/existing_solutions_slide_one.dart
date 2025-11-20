@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shorebird_slides/utils/app_styles.dart';
 import 'package:shorebird_slides/widgets/base_slide.dart';
 
-class IntroSlide extends StatelessWidget {
-  const IntroSlide({super.key});
+class ExistingSolutionsSlideOne extends StatelessWidget {
+  const ExistingSolutionsSlideOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class IntroSlide extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Shorebird CodePush: Revolutionising Flutter\nApp Updates in\nReal-Time',
+              'Existing Solutions\nfor OTA changes',
               style: AppStyles.h1(fontSize: 120),
               textAlign: TextAlign.center,
             ),
