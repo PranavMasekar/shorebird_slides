@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shorebird_slides/utils/app_assets.dart';
 import 'package:shorebird_slides/utils/app_styles.dart';
 import 'package:shorebird_slides/widgets/base_slide.dart';
 
@@ -13,9 +15,15 @@ class GymflowSlide extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Gymflow',
+              'Android',
               style: AppStyles.h1(fontSize: 120),
               textAlign: TextAlign.center,
+            ),
+            SvgPicture.asset(
+              AppAssets.androidQR,
+              fit: BoxFit.cover,
+              width: 500,
+              height: 500,
             ),
           ],
         ),

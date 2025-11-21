@@ -10,4 +10,5 @@ class AppAssets {
   static const String linkedinLogo = 'assets/icons/linkedin.svg';
   static const String xLogo = 'assets/icons/x.svg';
   static const String hashnodeLogo = 'assets/icons/hashnode.svg';
+  static const String androidQR = 'assets/icons/android_qr.svg';
 }

@@ -53,6 +53,7 @@ class ShorebirdSlides extends StatelessWidget {
       ),
       themeMode: ThemeMode.light,
       slides: [
+        GymflowSlide(),
         IntroSlide(),
         SpeakerSlide(),
         StorySlide(),
